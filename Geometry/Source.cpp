@@ -6,7 +6,8 @@ using namespace std;
 //#define TRINGLE_2
 //#define TRINGLE_3
 //#define TRINGLE_4
-#define TRINGLE_5
+//#define TRINGLE_5
+#define TRINGLE_6
 
 void main() {
 	setlocale(LC_ALL, "Russian"); // Установлена русская раскладка
@@ -85,5 +86,27 @@ void main() {
 	}
 #endif // TRINGLE_5
 
+#ifdef TRINGLE_6
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i; j < n; j++)
+		{
+			cout << " ";
+		}
+		cout << "/"; 
+		cout << "\n";
+	}
+
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i; j < n; j++)
+		{
+			cout << " ";
+		}
+		cout << "/";
+		cout << "\n";
+	}
+
+#endif // TRINGLE_6
 
 }
