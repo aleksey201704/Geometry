@@ -43,10 +43,17 @@ void main() {
 	
 	for (int i = 0; i < n; i++)
 	{
+		for (int pr = 0; pr < i; pr++)
+		{
+			cout << " ";
+		}
+
 		for (int j = i; j < n; j++)
 		{
 			cout << "*";
 		}
+
+
 		cout << endl;
 	}
 
@@ -54,17 +61,21 @@ void main() {
 
 #ifdef TRINGLE_4
 
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i <= n; i++)
 	{
-		for (int j = 0; j < i; j++)
+		
+		for (int j = i; j < n; j++)
 		{
 			cout << " ";
 		}
-		
-		for (int k = i; k < n; k++)
+
+		for (int k = 0; k < i; k++)
 		{
 			cout << "*";
 		}
+		
+		
+
 		cout << endl;
 	}
 
@@ -77,36 +88,91 @@ void main() {
 		{
 			cout << " ";
 		}
-
-		for (int k = 0; k <= i; k++)
+		cout << "/" ;
+		
+		for (int pr = 0; pr < i; pr++)
 		{
-			cout << "*";
+			cout << "  ";
+			
 		}
-		cout << endl;
-	}
-#endif // TRINGLE_5
-
-#ifdef TRINGLE_6
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = i; j < n; j++)
-		{
-			cout << " ";
-		}
-		cout << "/"; 
+		cout << "\\";
 		cout << "\n";
+
+
 	}
 
-	for (int i = 0; i < n; i++)
+	for (int i = 1; i < n+1; i++)
 	{
-		for (int j = i; j < n; j++)
+		for (int j = 0; j < i; j++)
 		{
 			cout << " ";
+		}
+		
+		cout << "\\";
+
+		for (int pr1 = i; pr1 < n; pr1++)
+		{
+			cout << "  ";
 		}
 		cout << "/";
 		cout << "\n";
 	}
 
+#endif // TRINGLE_5
+
+#ifdef TRINGLE_6
+	bool li;
+	li = true;
+
+	for (int i = 0; i < n; i++)
+	{
+		if (li)
+		{
+			for (int j = 0; j < n; j = j + 2)
+			{
+				cout << "+ ";
+				
+				if (n % 2 == 0)
+				{
+					cout << "- ";
+				}
+
+				if (n % 2 != 0 and n - 2 > j)
+				{
+					cout << "- ";
+				}
+
+			}
+			li = false;
+		}
+		else
+		{
+			for (int j = 0; j < n; j = j + 2)
+			{
+				cout << "- ";
+				if (n % 2 == 0)
+				{
+					cout << "+ ";
+				}
+
+				if (n % 2 != 0 and n - 2 > j)
+				{
+					cout << "+ ";
+				}
+
+			}
+			li = true;
+		}
+		
+
+		
+		cout << "\n";
+	}
+	
 #endif // TRINGLE_6
 
+
+
 }
+
+
