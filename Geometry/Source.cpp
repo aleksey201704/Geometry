@@ -121,54 +121,17 @@ void main() {
 #endif // TRINGLE_5
 
 #ifdef TRINGLE_6
-	bool li;
-	li = true;
-
 	for (int i = 0; i < n; i++)
 	{
-		if (li)
+		for (int j = 0; j < n; j++)
 		{
-			for (int j = 0; j < n; j = j + 2)
-			{
-				cout << "+ ";
-				
-				if (n % 2 == 0)
-				{
-					cout << "- ";
-				}
-
-				if (n % 2 != 0 and n - 2 > j)
-				{
-					cout << "- ";
-				}
-
-			}
-			li = false;
+			if (i % 2 == 0 and j % 2 == 0) cout << "+ ";
+			if (i % 2 == 0 and j % 2 != 0) cout << "- ";
+			if (i % 2 != 0 and j % 2 == 0) cout << "- ";
+			if (i % 2 != 0 and j % 2 != 0) cout << "+ ";
 		}
-		else
-		{
-			for (int j = 0; j < n; j = j + 2)
-			{
-				cout << "- ";
-				if (n % 2 == 0)
-				{
-					cout << "+ ";
-				}
-
-				if (n % 2 != 0 and n - 2 > j)
-				{
-					cout << "+ ";
-				}
-
-			}
-			li = true;
-		}
-		
-
-		
 		cout << "\n";
 	}
-	
 #endif // TRINGLE_6
 
 
